@@ -1,9 +1,9 @@
-import { useState } from 'react';
+ import { useState } from 'react';
 
 const useCounter = () => {
     const [count, setCount] = useState(0);
 
-const handleDecrement = ()=>{
+    const handleDecrement = ()=>{
         alert("Decrement")
         //count--;
         setCount(count - 1);
