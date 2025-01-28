@@ -12,12 +12,19 @@ const Counter = () => {
         alert("Increment")
        // count++;
          setCount(count + 1);
+        
+    }
+    const handleReset = ()=>{
+        alert("Reset")
+        //count = 0;
+        setCount(0);
     }
     return ( 
     <div style={{ display : "flex", gap : "16px ", }}>
         <button onClick={handleIncrement}>Tambah</button>
         <p>{count}</p>
         <button onClick={handleDecrement}>Kurang</button>
+        <button onClick={handleReset}>Reset</button>
     </div>
     
     )
