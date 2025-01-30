@@ -5,14 +5,16 @@ import Welcomes from "./components/Welcomes";
 import Counter from "./components/Counter";
 import FooterCustom from "./components/FooterCustom";
 import Like from "./components/Like";
+import { Routes, Route } from "react-router";
+import TermsPage from "./pages/TermsPage";
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
+import ProductDetailPage from "./pages/ProductDetailPages";
 
 
-// type Teacher = {
-//   name : string;
-//   job: string ;
-//   year: number;
-//   id : number; 
-// }
+
+
+
 
 // const teachers : Teacher[] = [
 //   {
@@ -38,33 +40,14 @@ import Like from "./components/Like";
 function App() {
   return (
     <>
-    <div style={{ padding : "16px 32px" }}>   
-    <HeaderCustom />
-      {/*<div style={{ gap : "10px" , display : "flex" , flexDirection : "row"}}>
-      {
-      teachers.map((teacher)=>{
-        return <ProfileCard 
-          name={teacher.name} 
-          year = {teacher.year}
-          jobs = {teacher.job}
-          key = {teacher.id}
-        />
-      })
-        
-      
-      }  
-    
-    </div>*/}
-    
-    <Counter />
-    <Like />
-    <Welcomes />
-    <FooterCustom />
-    
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />}/>
+      <Route path="/terms" element={<TermsPage />}/>
+      {/* dynamic Route */}
+      <Route path="/product/:productSlug" element={<ProductDetailPage />}/>
 
-
-    
+      <Route path="/*" element={<NotFoundPage/>}/>
+    </Routes>
     </>
     
   );
