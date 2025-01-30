@@ -1,10 +1,10 @@
 
 import HeaderCustom from "./components/HeaderCustom";
 // import ProfileCard from "./components/ProfileCard";
-import Welcomes from "./components/Welcomes";
-import Counter from "./components/Counter";
-import FooterCustom from "./components/FooterCustom";
-import Like from "./components/Like";
+// import Welcomes from "./components/Welcomes";
+// import Counter from "./components/Counter";
+// import FooterCustom from "./components/FooterCustom";
+// import Like from "./components/Like";
 import { Routes, Route } from "react-router";
 import TermsPage from "./pages/TermsPage";
 import HomePage from "./pages/HomePage";
@@ -40,11 +40,12 @@ import ProductListPage from "./pages/ProductListPage";
 function App() {
   return (
     <>
+    <HeaderCustom/>
     <Routes>
       <Route path="/" element={<HomePage />}/>
       <Route path="/terms" element={<TermsPage />}/>
       <Route path="/product-list" element={<ProductListPage/>}/>
-      
+
       {/* dynamic Route */}
       <Route path="/product/:productSlug" element={<ProductDetailPage />}/>
 
