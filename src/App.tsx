@@ -10,7 +10,7 @@ import TermsPage from "./pages/TermsPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductDetailPage from "./pages/ProductDetailPages";
-
+import ProductListPage from "./pages/ProductListPage";
 
 
 
@@ -43,6 +43,8 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />}/>
       <Route path="/terms" element={<TermsPage />}/>
+      <Route path="/product-list" element={<ProductListPage/>}/>
+      
       {/* dynamic Route */}
       <Route path="/product/:productSlug" element={<ProductDetailPage />}/>
 
